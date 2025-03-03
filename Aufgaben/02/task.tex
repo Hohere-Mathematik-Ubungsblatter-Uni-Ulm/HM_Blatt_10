@@ -1,0 +1,42 @@
+\task{Grenzwerte bestimmen}{3+3}
+Bestimme, sofern existient, für folgende Funktionen $f$ und Punkte $x_0$ jeweils den rechtsseitigen Grenzwert $lim_{x\to x_0^+}f(x)$ und den linksseitigen Grenzwert $lim_{x\to x_0^-}f(x)$. Begründe andernfalls, weshalb der jeweilige Grenzwert nicht existiert. \\
+Entscheide und begründe außerdem, ob $f$ im Punkt $x_0$ stetig ist.
+
+\begin{subtask}
+    $x_0=1$ und $f:(0,\infty)\to\RR$ mit $f(x)=
+    \begin{cases}
+        x^3+1 & \text{falls $x\leq 1$} \\
+        \frac{1}{x^3}+1 & \text{sonst}
+    \end{cases}$
+\end{subtask}
+\begin{solution}
+    Linksseitiger Grenzwert: \[\lim_{x\to1^-}f(x)=\lim_{x\to1^-}x^3+1=1^3+1=1+1=2\]
+    Rechtsseitiger Grenzwert: \[\lim_{x\to1^+}f(x)=\lim_{x\to1^+}\frac{1}{x^3}+1=\frac{1}{1^3}+1=\frac11+1=1+1=2\]
+    $\Rightarrow f(x)$ ist stetig in $x_0$, da der Rechtsseitige und der Linksseitige Grenzwert gleich ist.
+\end{solution}
+
+\begin{subtask}
+    $x_0=0$ mit $f:\RR\to\RR$ mit $f(x)=
+    \begin{cases}
+        cos(x+\frac{\pi}{2}) & \text{falls $x<0$} \\
+        1 & \text{falls x=0} \\
+        sin(2x+\pi) & \text{sonst}
+    \end{cases}$
+\end{subtask}
+\begin{solution}
+    Linksseitiger Grenzwert:
+    \[
+        \lim_{x\to0^-}f(x)
+        =\lim_{x\to0^-}cos(x+\frac{\pi}{2})
+        =cos(0+\frac{\pi}{2})
+        =cos(\frac{\pi}{2})=0
+    \]
+    Rechtsseitiger Grenzwert:
+    \[
+        \lim_{x\to0^+}f(x)
+        =\lim_{x\to0^+}sin(2x+\pi)
+        =sin(2\cdot0+\pi)
+        =sin(\pi)=0
+    \]
+    $\Rightarrow f(x)$ ist nicht stetig in $x_0$, da der rechtsseitige und linksseitige Grenzwert gegen $0$ geht, allerdings $f(0)=1$ gilt.
+\end{solution}

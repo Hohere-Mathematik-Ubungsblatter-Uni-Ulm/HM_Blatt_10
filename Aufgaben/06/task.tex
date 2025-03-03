@@ -1,0 +1,40 @@
+\task{Existenz von Grenzwerten}{4}
+Gegeben seien zwei stetige Funktionen $f:\RR\to\RR$ und $g:\RR\to\RR$. Zudem existiere $\lim_{h\to0}\frac{f(x+h)-f(x)}{h}$ sowie $\lim_{h\to0}\frac{g(x+h)-g(c)}{h}$. Überprüfe, ob dann auch $\lim_{h\to0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h}$ existiert. Was lässt sich mit dem Ergebnis aussagen?
+
+\begin{solution}
+        
+    Wir formen zuerst $f(x+h)g(x+h) - f(x)g(x)$ um:    
+    \[
+    f(x+h)g(x+h)-f(x)g(x) 
+    = (f(x+h)-f(x))g(x+h)+f(x)(g(x+h)-g(x))
+    \]
+    \[
+    \Rightarrow \frac{f(x+h)g(x+h)-f(x)g(x)}{h}
+    =\frac{(f(x+h)-f(x))g(x+h)}{h}+\frac{f(x)(g(x+h)-g(x))}{h}
+    \]
+    Betrachten wir zuerst den ersten Summanden:
+    \[
+    \frac{(f(x+h) - f(x))g(x+h)}{h}.
+    \]
+    Da $g$ stetig ist, gilt $g(x+h) \to g(x)$ für $h \to 0$. Zudem existiert der Grenzwert $\lim_{h \to 0} \frac{f(x+h) - f(x)}{h}$.    
+    Bezeichnen wir diesen Grenzwert mit $f'(x)$    
+    \[
+    \Rightarrow \lim_{h \to 0} \frac{(f(x+h) - f(x))g(x+h)}{h} = f'(x)g(x)
+    \]
+    Das gleiche machen wir nun mit dem zweiten Summanden:
+    \[
+    \frac{f(x)(g(x+h) - g(x))}{h}.
+    \]
+    Da $f(x)$ unabhängig von $h$ ist, kann es aus dem Bruch herausgezogen werden. Weiterhin existiert der Grenzwert $\lim_{h\to0}\frac{g(x+h)-g(x)}{h}$
+    Bezeichnen wir diesen Grenzwert mit $g'(x)$
+    \[
+    \Rightarrow \lim_{h\to0}\frac{f(x)(g(x+h)-g(x))}{h}
+    =f(x)g'(x)
+    \]
+    Kombinieren wir die Ergebnisse der beiden Summanden, erhalten wir:
+    \[
+    \lim_{h\to0}\frac{f(x+h)g(x+h)-f(x)g(x)}{h}
+    =f'(x)g(x)+f(x)g'(x)
+    \]
+    $\Rightarrow$ Der Grenzwert existiert und entspricht der Produktregel der Differentiation und zeigt, dass das Produkt zweier differenzierbarer Funktionen wieder differenzierbar ist.
+\end{solution}

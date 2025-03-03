@@ -1,0 +1,25 @@
+\task{Existenz von Grenzwerten}{4+3}
+Überprüfe, ob die folgenden beiden Funktionen für $x\to0^+$ einen Grenzwert besitzen?
+
+\begin{minipage}[t]{0.49\textwidth}
+    \begin{subtask}
+        $xsin(\frac{1}{x})$
+    \end{subtask}
+    \begin{solution}
+        \[
+            \lim_{x\to0^+}xsin(\frac{1}{x})
+            =\lim_{x\to0^+}x\cdot\lim_{x\to0^+}sin(\frac{1}{x})
+        \]\[
+            =0\cdot\lim_{x\to0^+}sin(\frac{1}{x})
+            =0 \text{, da }0\cdot a = 0 \ \forall a \in \RR
+        \]
+    \end{solution}
+\end{minipage} %
+\begin{minipage}[t]{0.49\textwidth}
+    \begin{subtask}
+        $cos(\frac{1}{x})$
+    \end{subtask}
+    \begin{solution}
+        $cos(\frac{1}{x})$ hat keinen Grenzwert für $x\to0^+$, da $\frac{1}{x}\to\infty$ für $x\to0^+$, somit kann kein genauer Wert für $\lim_{x\to0^+}cos(\frac{1}{x})$ bestimmt werden.
+    \end{solution}
+\end{minipage}

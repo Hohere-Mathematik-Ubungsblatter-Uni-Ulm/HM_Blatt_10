@@ -1,0 +1,46 @@
+\task{stetigkeit auf gesamten Definitionsbereich}{3+3}
+Wie muss $a\in\RR$ gewählt werden, damit die folgenden Funktionen auf dem gesamten Definitionsbereich stetig werden?
+
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{subtask}
+        $f:(0,\infty)\to\RR$ mit
+        \[
+            f(x)=
+            \begin{cases}
+                x^2-4, & x\geq3,\\
+                -\frac{1}{x}+a, & x<3
+            \end{cases}
+        \]
+    \end{subtask}
+    \begin{solution}
+        Wir untersuchen zuerst die einzelnen Funktionen auf Stetigkeit: \\
+        $x^2-4$ ist als Polynom auf $\RR$ stetig und \\
+        $-\frac{1}{x}+a$ ist stetig in $\RR\backslash\{0\}$ und somit stetig im Definitionsbereich.
+        \[\lim_{x\to3^+}f(x)=\lim_{x\to3^+}x^2-4=5\]
+        \[\lim_{x\to3^-}f(x)=\lim_{x\to3^-}-\frac{1}{x}+a=-\frac{1}{3}-a\]
+        $\Rightarrow$ wir müssen $a=-\frac{16}{3}$ wählen, dass die Funktion stetig im Definitionsbereich ist.
+    \end{solution}
+\end{minipage} %
+\begin{minipage}[t]{0.5\textwidth}
+    \begin{subtask}
+        $g:\RR\to\RR$ mit
+        \[
+            g(x)=
+            \begin{cases}
+                2ax-x^3, & x>-3 \\
+                -4x^2+21x, & x\leq -3
+            \end{cases}
+        \]
+    \end{subtask}
+    \begin{solution}
+        Die einzelnen Funktionen von $g$ sind jeweils als Polynome auf ganz $\RR$ stetig. Wir untersuchen nun den Grenzwert $x=-3$
+        \[\lim_{x\to-3^+}g(x)=\lim_{x\to-3^+}2ax-x^3=-6a+27\]
+        \[\lim_{x\to-3^-}g(x)=\lim_{x\to-3^-}-4x^2+21x=-36-63\]
+        $=-99$ \\
+        $\Rightarrow -6a+27=-99$ muss gelten, dass $g$ im Definitionsbereich stetig ist. 
+        \[-6a+27=-99\]
+        \[\Leftrightarrow -6a=-126\]
+        \[\Leftrigharrow a=21\]
+        $\Rightarrow$ wir müssen $a=21$ wählen, dass die Funktion $g$ stetig im Definitionsbereich ist.
+    \end{solution}
+\end{minipage}
